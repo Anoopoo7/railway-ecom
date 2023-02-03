@@ -35,14 +35,17 @@ function NavbarTop() {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="ms-auto">
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/">Wishlist</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">GitHub</NavLink>
+              <NavLink href="/">Cart</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+            <NavItem>
+              <NavLink href="/">Profile</NavLink>
+            </NavItem>
+            {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Profile
               </DropdownToggle>
               <DropdownMenu end>
                 <DropdownItem>Option 1</DropdownItem>
@@ -50,7 +53,7 @@ function NavbarTop() {
                 <DropdownItem divider />
                 <DropdownItem>Reset</DropdownItem>
               </DropdownMenu>
-            </UncontrolledDropdown>
+            </UncontrolledDropdown> */}
           </Nav>
         </Collapse>
       </Navbar>
