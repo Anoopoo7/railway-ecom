@@ -1,15 +1,16 @@
 import HorizondalStaticBanner from '@/widgets/common/horizondalStaticbanner'
-import { Col, Container, Row } from 'reactstrap'
+import { Container } from 'reactstrap'
 import HeroBanner from '../component/heroBanner'
-import ProductCarosal from '../component/productCarosel'
+import ScrollCarosal from '../component/scrollCarosal'
 
 const HomePageLayout = () => {
   return (
     <Container>
       <HeroBanner />
-      <ProductCarosal />
-      <HorizondalStaticBanner/>
-      <ProductCarosal />
+      <ScrollCarosal />
+      <ScrollCarosal type={'product'} />
+      <HorizondalStaticBanner />
+      <ScrollCarosal type={'product'} />
     </Container>
   )
 }

@@ -16,8 +16,13 @@
 .pointer {
   cursor: pointer;
 }
+.vh-80 {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
 
-/* ========common======== */
+/* ========footer======== */
 .footer-custom {
   background-color: #2d2d2d70;
   padding: 3rem 2rem;
@@ -34,7 +39,19 @@
 
 /* ========product ========= */
 .product-card-outer {
-  min-width: 15rem;
-  min-height: 40vh;
+  min-width: 13rem;
+  min-height: 30vh;
   padding: 1rem;
+}
+/* =======category========= */
+.category-card-outer {
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
