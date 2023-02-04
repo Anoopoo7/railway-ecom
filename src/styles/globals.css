@@ -1,11 +1,10 @@
-.section-inner{
+.section-inner {
   width: 100%;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 /* ========common======== */
 ::-webkit-scrollbar {
@@ -25,17 +24,31 @@
 .pointer {
   cursor: pointer;
 }
+.f-start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 .vh-80 {
   height: 80vh;
   display: flex;
   align-items: center;
 }
-.shadoww{
+.shadoww {
   box-shadow: 3px 3px 15px #888888;
   cursor: pointer;
 }
-.shadoww:hover{
+.shadoww:hover {
   box-shadow: 5px 5px 15px #888888;
+}
+.f-1 {
+  display: flex;
+  flex: 1;
+}
+.f-2 {
+  display: flex;
+  flex: 2;
+  text-align: center;
 }
 
 /* ========footer======== */
@@ -58,24 +71,61 @@
   min-width: 13rem;
   min-height: 30vh;
   padding: 1rem;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   cursor: pointer;
 }
-.product-card-outer:hover{
+.product-card-outer:hover {
   min-width: 15rem;
   min-height: 31vh;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   padding: 30px;
   border: 2px solid #ff0000;
 }
-.prod-heart{
+.prod-heart {
   position: absolute;
   width: 30px;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
+  z-index: 9;
 }
-.prod-heart:hover{
+.hover-animation {
+  /* border: 0.1px solid black; */
+  padding: 20%;
+  border-radius: 25%;
+}
+@media only screen and (max-width: 768px) {
+  .hover-animation {
+    padding: 2%;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+}
+.hover-animation:hover {
+  transform: scale(1.5);
+  transition: 0.3s ease-out;
+}
+.prod-heart:hover {
   width: 40px;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
+}
+.min-width {
+  min-width: 80px;
+  transition: 0.3s ease-out;
+}
+.min-width:hover {
+  border: 1px solid red;
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
+.image-pdp {
+  transition: 0.3s ease-out;
+  cursor: pointer;
+}
+.image-pdp:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
+select {
+  padding: 2.4%;
 }
 /* =======category========= */
 .category-card-outer {
@@ -87,16 +137,15 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   cursor: pointer;
   border: 0.1px solid black;
   /* box-shadow: 5px 5px 15px #888888; */
 }
-.category-card-outer:hover{
+.category-card-outer:hover {
   border: none;
   min-width: 6rem;
   min-height: 6rem;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   background-color: #2d2d2d70;
-  
 }

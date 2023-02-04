@@ -1,17 +1,6 @@
-import { useState } from 'react'
-import {
-  Col,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-  TabContent,
-  TabPane,
-} from 'reactstrap'
-import ScrollCarosal from '../home/component/scrollCarosal'
+import { Nav, NavItem, NavLink } from 'reactstrap'
 
-const TabSwitcher = ({activeTab,setActiveTab}) => {
-
+const TabSwitcher = ({ activeTab, setActiveTab }) => {
   return (
     <div className="mt-5">
       <Nav tabs>

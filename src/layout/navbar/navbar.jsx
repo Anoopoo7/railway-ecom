@@ -35,13 +35,31 @@ function NavbarTop() {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="ms-auto">
             <NavItem>
-              <NavLink href="/">Wishlist</NavLink>
+              <NavLink href="/" className='d-flex align-items-center'>
+                <img
+                  className="hover-animation shadoww"
+                  src="https://img.icons8.com/emoji/25/null/heart-suit.png"
+                />{' '}
+                <small className='d-flex d-md-none'>Wishlist</small>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Cart</NavLink>
+              <NavLink href="/" className='d-flex align-items-center'>
+                <img
+                  className="hover-animation shadoww"
+                  src="https://img.icons8.com/fluency/25/null/red-purse.png"
+                />{' '}
+                <small className='d-flex d-md-none'>Cart</small>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Profile</NavLink>
+              <NavLink href="/" className='d-flex align-items-center'>
+                <img
+                  className="hover-animation shadoww"
+                  src="https://img.icons8.com/fluency/25/null/administrator-male.png"
+                />{' '}
+                <small className='d-flex d-md-none'>Profile</small>
+              </NavLink>
             </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
