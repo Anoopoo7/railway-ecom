@@ -69,6 +69,7 @@
 /* ========product ========= */
 .product-card-outer {
   min-width: 13rem;
+  max-width: 13rem;
   min-height: 30vh;
   padding: 1rem;
   transition: 0.3s ease-out;
@@ -149,3 +150,5 @@ select {
   transition: 0.3s ease-out;
   background-color: #2d2d2d70;
 }
+
+/* ==========PLP=============== */

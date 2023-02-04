@@ -1,4 +1,4 @@
-import ProductContainer from '@/widgets/product/container/productContainer'
+import ProductContainer from '@widgets/product/container/productContainer'
 
 const ProductDetails = () => {
   return <ProductContainer />

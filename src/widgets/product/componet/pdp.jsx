@@ -1,4 +1,4 @@
-import Motion from '@/motions/motions'
+import Motion from '@motions/motions'
 import { Button, Card, Col, Row } from 'reactstrap'
 import Quantity from './quantity'
 import Selector from './selector'

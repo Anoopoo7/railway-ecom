@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Motion from '@/motions/motions'
+import Motion from '@motions/motions'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Button, Card } from 'reactstrap'
@@ -9,7 +9,7 @@ const ProductCard = () => {
   const router = useRouter()
   return (
     <Motion>
-      <Card className="product-card-outer me-3">
+      <Card className="product-card-outer me-3 mt-3">
         {wishlist ? (
           <Motion
             initial={{

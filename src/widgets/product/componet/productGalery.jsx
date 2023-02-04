@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import Motion from '@/motions/motions'
+import Motion from '@motions/motions'
 import { useState } from 'react'
 import { Card, Col } from 'reactstrap'
 

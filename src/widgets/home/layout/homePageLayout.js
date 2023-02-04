@@ -1,5 +1,5 @@
-import HorizondalStaticBanner from '@/widgets/common/horizondalStaticbanner'
-import TabSwitcher from '@/widgets/common/tabSwitcher'
+import HorizondalStaticBanner from '@widgets/common/horizondalStaticbanner'
+import TabSwitcher from '@widgets/common/tabSwitcher'
 import { useState } from 'react'
 import { Container } from 'reactstrap'
 import HeroBanner from '../component/heroBanner'
