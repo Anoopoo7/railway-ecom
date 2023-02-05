@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import {
   Collapse,
@@ -19,6 +20,7 @@ import {
 function NavbarTop() {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
+  const router = useRouter()
 
   return (
     <Container>
@@ -35,30 +37,33 @@ function NavbarTop() {
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="ms-auto">
             <NavItem>
-              <NavLink href="/" className='d-flex align-items-center'>
+              <NavLink href="/" className="d-flex align-items-center">
                 <img
                   className="hover-animation shadoww"
                   src="https://img.icons8.com/emoji/25/null/heart-suit.png"
                 />{' '}
-                <small className='d-flex d-md-none'>Wishlist</small>
+                <small className="d-flex d-md-none">Wishlist</small>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/" className='d-flex align-items-center'>
+              <NavLink
+                onClick={() => router.push('/cart')}
+                className="d-flex align-items-center"
+              >
                 <img
                   className="hover-animation shadoww"
                   src="https://img.icons8.com/fluency/25/null/red-purse.png"
                 />{' '}
-                <small className='d-flex d-md-none'>Cart</small>
+                <small className="d-flex d-md-none">Cart</small>
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/" className='d-flex align-items-center'>
+              <NavLink href="/" className="d-flex align-items-center">
                 <img
                   className="hover-animation shadoww"
                   src="https://img.icons8.com/fluency/25/null/administrator-male.png"
                 />{' '}
-                <small className='d-flex d-md-none'>Profile</small>
+                <small className="d-flex d-md-none">Profile</small>
               </NavLink>
             </NavItem>
             {/* <UncontrolledDropdown nav inNavbar>

@@ -9,7 +9,7 @@ const ScrollCarosal = ({ type, hideTitle }) => {
       {!hideTitle && (
         <div className="f-between">
           <h6>Most selling</h6>
-          <span className="f-center pointer" onClick={()=>router.push("/product-list")}>
+          <span className="f-center pointer" onClick={()=>router.push("/list/product-list")}>
             view all
             <img src="https://img.icons8.com/material-outlined/24/null/forward.png" />
           </span>

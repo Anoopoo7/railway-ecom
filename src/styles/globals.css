@@ -41,6 +41,11 @@
 .shadoww:hover {
   box-shadow: 5px 5px 15px #888888;
 }
+.f-center-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .f-1 {
   display: flex;
   flex: 1;
@@ -151,4 +156,10 @@ select {
   background-color: #2d2d2d70;
 }
 
-/* ==========PLP=============== */
+/* ==========cart=============== */
+.cart-img{
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 8%;
+  border: 0.1px solid black;
+}
