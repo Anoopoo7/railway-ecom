@@ -1,6 +1,8 @@
+import { useRouter } from 'next/router'
 import { Button, Card, CardBody, UncontrolledCollapse } from 'reactstrap'
 
 const PriceView = () => {
+  const router = useRouter()
   return (
     <Card className="shadoww mt-2 p-3">
       <Card className="p-2">
@@ -51,7 +53,9 @@ const PriceView = () => {
         <span>10,200</span>
       </div>
       <br />
-      <Button color='success'>Checkout</Button>
+      <Button color="success" onClick={() => router.push('/payment')}>
+        Checkout
+      </Button>
     </Card>
   )
 }
