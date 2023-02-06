@@ -1,25 +1,19 @@
 import { Nav, NavItem, NavLink } from 'reactstrap'
 
-const TabSwitcher = ({ activeTab, setActiveTab }) => {
+const TabSwitcher = ({ tabDetails, activeTab, setActiveTab }) => {
   return (
     <div className="mt-5">
       <Nav tabs>
-        <NavItem>
-          <NavLink
-            className={`pointer ${activeTab === 1 ? 'active' : ''}`}
-            onClick={() => setActiveTab(1)}
-          >
-            Most trending
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            className={`pointer ${activeTab === 2 ? 'active' : ''}`}
-            onClick={() => setActiveTab(2)}
-          >
-            Fasionable
-          </NavLink>
-        </NavItem>
+        {tabDetails?.map((title, index) => (
+          <NavItem key={index}>
+            <NavLink
+              className={`pointer ${activeTab === index ? 'active' : ''}`}
+              onClick={() => setActiveTab(index)}
+            >
+              {title}
+            </NavLink>
+          </NavItem>
+        ))}
       </Nav>
     </div>
   )

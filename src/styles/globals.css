@@ -41,7 +41,7 @@
 .shadoww:hover {
   box-shadow: 5px 5px 15px #888888;
 }
-.f-center-vertical{
+.f-center-vertical {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,6 +148,12 @@ select {
   border: 0.1px solid black;
   /* box-shadow: 5px 5px 15px #888888; */
 }
+@media only screen and (max-width: 768px) {
+  .category-card-outer {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+}
 .category-card-outer:hover {
   border: none;
   min-width: 6rem;
@@ -157,7 +163,7 @@ select {
 }
 
 /* ==========cart=============== */
-.cart-img{
+.cart-img {
   border-radius: 10px;
   padding: 10px;
   margin-right: 8%;

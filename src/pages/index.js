@@ -9,10 +9,10 @@ export async function getStaticProps(ctx) {
   }
 }
 
-export default function Home() {
+export default function Home({ res }) {
   return (
     <Motion>
-      <HomePageContainer />
+      <HomePageContainer res={res} />
     </Motion>
   )
 }

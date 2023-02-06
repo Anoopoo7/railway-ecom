@@ -2,14 +2,18 @@ import CategoryCard from '@widgets/category/component/categorycard'
 import ProductCard from '@widgets/product/componet/productCard'
 import { useRouter } from 'next/router'
 
-const ScrollCarosal = ({ type, hideTitle }) => {
+const ScrollCarosal = ({ carosalDetails }) => {
+  const { active, type, hideTitle, title, items } = carosalDetails || {}
   const router = useRouter()
   return (
     <div className={`carosel-outer ${hideTitle ? '' : 'mt-5 mb-5'}`}>
       {!hideTitle && (
         <div className="f-between">
-          <h6>Most selling</h6>
-          <span className="f-center pointer" onClick={()=>router.push("/list/product-list")}>
+          <h6>{title}</h6>
+          <span
+            className="f-center pointer"
+            onClick={() => router.push('/list/product-list')}
+          >
             view all
             <img src="https://img.icons8.com/material-outlined/24/null/forward.png" />
           </span>
@@ -17,32 +21,17 @@ const ScrollCarosal = ({ type, hideTitle }) => {
       )}
 
       <div className="carosel-innner mt-4">
-        {type === 'product' ? (
+        {type === 'Product' ? (
           <>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {items?.map((each, i) => (
+              <ProductCard key={i} items={each} />
+            ))}
           </>
         ) : (
           <>
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
-            <CategoryCard />
+            {items?.map((each, i) => (
+              <CategoryCard key={i} items={each} />
+            ))}
           </>
         )}
       </div>
