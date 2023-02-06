@@ -4,8 +4,9 @@ import Motion from '@motions/motions'
 import { useState } from 'react'
 import { Card, Col } from 'reactstrap'
 
-const ProductGalery = () => {
-  const [wishlist, setWishlist] = useState(false)
+const ProductGalery = ({ wishlisted, pictures }) => {
+  const [wishlist, setWishlist] = useState(wishlisted)
+  const [activePic, setActivepic] = useState(pictures && pictures[0])
   return (
     <div>
       {wishlist ? (
@@ -37,64 +38,21 @@ const ProductGalery = () => {
         animate={{ y: 0, transform: 'scale(1)', opacity: 1 }}
       >
         <div className="f-center">
-          <img
-            className="img-fluid p-3 image-pdp"
-            src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-            alt=""
-          />
+          <img className="img-fluid p-3 image-pdp" src={activePic} alt="" />
         </div>
       </Motion>
       <div className="carosel-outer">
         <div className="carosel-innner">
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
-          <Card className="p-2 m-2 min-width f-center pointer">
-            <img
-              src="https://m.media-amazon.com/images/I/41AP5QV2M0L._AC_SR400,600_.jpg"
-              width={50}
-              alt=""
-            />
-          </Card>
+          {pictures &&
+            pictures.map((each, i) => (
+              <Card
+                key={i}
+                className="p-2 m-2 min-width f-center pointer"
+                onClick={() => setActivepic(each)}
+              >
+                <img src={each} width={50} alt="" />
+              </Card>
+            ))}
         </div>
       </div>
     </div>

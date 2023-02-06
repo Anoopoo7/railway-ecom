@@ -1,14 +1,22 @@
 import { Card } from 'reactstrap'
 
-const Selector = () => {
+const Selector = ({ varients, varient, changeVarient }) => {
   return (
     <div className="carosel-outer">
       <div className="carosel-innner">
-        <Card className="p-3 m-2 min-width f-center pointer">hq</Card>
-        <Card className="p-3 m-2 min-width f-center pointer">hq</Card>
-        <Card className="p-3 m-2 min-width f-center pointer">hq</Card>
-        <Card className="p-3 m-2 min-width f-center pointer">hq</Card>
-        <Card className="p-3 m-2 min-width f-center pointer">hq</Card>
+        {varients &&
+          Array.isArray(varients) &&
+          varients.map((each, i) => (
+            <Card
+              key={each}
+              className={`p-3 m-2 ${
+                varient === each ? 'selected' : ''
+              } min-width f-center pointer`}
+              onClick={() => changeVarient(i)}
+            >
+              {each}
+            </Card>
+          ))}
       </div>
     </div>
   )

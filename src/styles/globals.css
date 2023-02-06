@@ -122,6 +122,11 @@
   transform: scale(1.1);
   transition: 0.3s ease-out;
 }
+.selected {
+  border: 1px solid red;
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
 .image-pdp {
   transition: 0.3s ease-out;
   cursor: pointer;

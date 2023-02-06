@@ -4,10 +4,21 @@ import { Button, Card, Col, Row } from 'reactstrap'
 import Quantity from './quantity'
 import Selector from './selector'
 
-const PDP = ({ addtoCart }) => {
+const PDP = ({
+  addtoCart,
+  offers,
+  name,
+  varient,
+  price,
+  quantity,
+  off,
+  pkey,
+  varients,
+  changeVarient,
+}) => {
   return (
     <>
-      <small className="text-danger pointer">PKEY: ASERFT3E5600</small>
+      <small className="text-danger pointer">PKEY: {pkey}</small>
       <Motion
         initial={{
           transform: 'scale(0.5)',
@@ -18,44 +29,43 @@ const PDP = ({ addtoCart }) => {
           opacity: 1,
         }}
       >
-        <h4>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-          recusandae nisi saepe!
-        </h4>
+        <h4>{name}</h4>
         <br />
         <div>
           <b>Options:</b>
-          <Selector />
+          <Selector
+            varients={varients}
+            varient={varient}
+            changeVarient={changeVarient}
+          />
         </div>
         <br />
         <div className="d-flex align-items-center">
-          <h3>₹ 4,500</h3>
+          <h3>₹ {price}</h3>
           <small className="text-success ms-2 pointer">
-            <i> 56% OFF</i>
+            <i> {off}% OFF</i>
           </small>
         </div>
         <br />
         <h6>Available offers:</h6>
         <div>
-          <img src="https://img.icons8.com/plasticine/25/null/tag-window.png" />{' '}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id optio ea,
-          <br />
-          <img src="https://img.icons8.com/plasticine/25/null/tag-window.png" />{' '}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id optio ea,
-          <br />
-          <img src="https://img.icons8.com/plasticine/25/null/tag-window.png" />{' '}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id optio ea,
-          <br />
-          <img src="https://img.icons8.com/plasticine/25/null/tag-window.png" />{' '}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id optio ea,
-          <br />
-          <img src="https://img.icons8.com/plasticine/25/null/tag-window.png" />{' '}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id optio ea,
+          {offers &&
+            Array.isArray(offers) &&
+            offers.map((each, i) => (
+              <>
+                <img
+                  key={i}
+                  src="https://img.icons8.com/plasticine/25/null/tag-window.png"
+                />{' '}
+                {each}
+                <br />
+              </>
+            ))}
         </div>
         <br />
         <Row className="f-start mt-5 mb-5">
           <Col xs="3">
-            <Quantity />
+            <Quantity quantity={quantity} />
           </Col>
           <Col xs="9">
             <Card className="mb-1">
