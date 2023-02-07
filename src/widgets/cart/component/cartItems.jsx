@@ -5,10 +5,10 @@ import { Card } from 'reactstrap'
 const CartItems = () => {
   return (
     <>
-      <Card className="shadoww p-3 mb-2">
+      <Card className=" p-3 mb-2">
         <h4>My cart</h4>
       </Card>
-      <Card className="shadoww p-3 p-lg-5 mb-2">
+      <Card className=" p-3 p-lg-5 mb-2">
         <br />
         <div className="d-flex">
           <div className="me-3">
@@ -44,7 +44,7 @@ const CartItems = () => {
           </div>
         </div>
       </Card>
-      <Card className="shadoww p-3 p-lg-5 mb-2">
+      <Card className=" p-3 p-lg-5 mb-2">
         <br />
         <div className="d-flex">
           <div className="me-3">

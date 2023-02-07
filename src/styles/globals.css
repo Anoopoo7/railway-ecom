@@ -153,18 +153,25 @@ select {
   border: 0.1px solid black;
   /* box-shadow: 5px 5px 15px #888888; */
 }
-@media only screen and (max-width: 768px) {
-  .category-card-outer {
-    min-width: 3rem;
-    min-height: 3rem;
-  }
-}
 .category-card-outer:hover {
   border: none;
   min-width: 6rem;
   min-height: 6rem;
   transition: 0.3s ease-out;
   background-color: #2d2d2d70;
+}
+@media only screen and (max-width: 768px) {
+  .category-card-outer {
+    min-width: 3rem;
+    min-height: 3rem;
+  }
+  .category-card-outer:hover {
+    border: none;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+    transition: 0.3s ease-out;
+    background-color: #2d2d2d70;
+  }
 }
 
 /* ==========cart=============== */

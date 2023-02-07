@@ -1,4 +1,3 @@
-import Breadcrumbs from '@/widgets/common/breadcrumbs'
 import { Col, Container, Row } from 'reactstrap'
 import CartItems from '../component/cartItems'
 import PriceView from '../component/priceView'
@@ -6,8 +5,7 @@ import PriceView from '../component/priceView'
 const CartLayout = () => {
   return (
     <Container>
-      <Breadcrumbs />
-      <Row>
+      <Row className='mt-5'>
         <Col md="8">
           <CartItems />
         </Col>
