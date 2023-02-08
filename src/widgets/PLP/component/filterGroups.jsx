@@ -5,10 +5,10 @@ const FilterGroup = () => {
   return (
     <>
       <Card style={{ border: 'none' }} className="mt-3">
-        <Button id="toggler" className="text-dark mb-1">
+        <Button id="toggler" className="text-light bg-dark mb-1">
           <div className="f-between">
-            <b>Filter By price</b>
-            <img src="https://img.icons8.com/material/24/null/expand-arrow--v1.png" />
+            <>Filter By price</>
+            <img src="https://img.icons8.com/material/24/FFFFFF/expand-arrow--v1.png" />
           </div>
         </Button>
         <UncontrolledCollapse
@@ -39,10 +39,10 @@ const FilterGroup = () => {
         </UncontrolledCollapse>
       </Card>
       <Card style={{ border: 'none' }}>
-        <Button id="toggler" className="text-dark mb-1">
+        <Button id="toggler" className="text-light bg-dark mb-1">
           <div className="f-between">
-            <b>Filter By Brand</b>
-            <img src="https://img.icons8.com/material/24/null/expand-arrow--v1.png" />
+            <>Filter By Brand</>
+            <img src="https://img.icons8.com/material/24/FFFFFF/expand-arrow--v1.png" />
           </div>
         </Button>
         <UncontrolledCollapse
