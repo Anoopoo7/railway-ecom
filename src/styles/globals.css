@@ -181,3 +181,10 @@ select {
   margin-right: 8%;
   border: 0.1px solid black;
 }
+/* ==========order confirmation======= */
+.congrats {
+  background-color: purple;
+  color: white;
+  padding-top:50px ;
+  padding-bottom:50px ;
+}

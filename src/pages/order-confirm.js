@@ -1,5 +1,7 @@
+import OrderConfirmationContainer from '@widgets/orderConformation/container/orderConfirmationContainer'
+
 const OrderConfirmaton = () => {
-  return <h1>order confirmed</h1>
+  return <OrderConfirmationContainer />
 }
 
 export default OrderConfirmaton
